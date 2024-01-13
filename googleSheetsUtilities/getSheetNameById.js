@@ -14,7 +14,7 @@ Created by Chris Owen Jan 13 2024
 // TODO Implement IIFE pattern
 
 function getSheetNameById(spreadSheetId,sheetId) {
-  var spreadSheet = SpreadsheetApp.openById(spreadSheetId).getSheets();
+  var sheets = SpreadsheetApp.openById(spreadSheetId).getSheets();
   return sheets.filter(function(sheet) {
       return sheet.getSheetId() == sheetId;
     })[0].getName();
